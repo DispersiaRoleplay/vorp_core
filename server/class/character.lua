@@ -393,11 +393,13 @@ function Character(data)
     end
 
     self.addXp = function(quantity)
+        if not quantity then return print("Quantity is required") end
         self.xp = self.xp + quantity
         self.updateCharUi()
     end
 
     self.removeXp = function(quantity)
+        if not quantity then return print("Quantity is required") end
         self.Xp = self.xp - quantity
         self.updateCharUi()
     end
