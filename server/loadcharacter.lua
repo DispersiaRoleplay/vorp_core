@@ -50,7 +50,7 @@ end)
 
 
 RegisterServerEvent('vorp_core:Server:OnPlayerDeath')
-AddEventHandler('vorp_core:Server:OnPlayerDeath', function(killerServerId)
+AddEventHandler('vorp_core:Server:OnPlayerDeath', function(killerServerId, deathCause)
     local _source = source
     local identifier = GetPlayerIdentifierByType(_source, 'steam')
     local victimSteamName = GetPlayerName(_source)
